@@ -8,4 +8,9 @@ html, body {
     color: #fff;
     background-color: rgb(25, 25, 25);
     background-position: center;
+    overflow-y:hidden;
+}
+
+#navbar {
+    background-color: #000;
 }
