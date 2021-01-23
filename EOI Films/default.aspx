@@ -21,13 +21,13 @@
     <form id="frmHome" runat="server">
         <!-- Navigation -->
         <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark">
-          <div class="container-fluid">
+          <div class="container">
             <a class="navbar-brand" href="#">EOI Films</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav m-lg-3 ms-md-auto">
+              <ul class="navbar-nav <%--ms-auto--%> m-lg-3">
                 <li class="nav-item">
                  <a class="nav-link active" href="#">Home</a>
                 </li>
@@ -46,14 +46,32 @@
         </nav>
            
         <%-- Content --%>
-        <section class="section-1">
-            <div class="col">
-              1
-            </div>
-            <div class="col">
-                <asp:Image ID="CoverImage" runat="server" />
+       <section class="space"></section>
+
+        <section class="section-one">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-1">Display 1</h1>
+                    <p class="h2">h2. Bootstrap heading</p>
+                </div>
+                <div id="img1" class="col">
+                    
+                </div>
             </div>
         </section>
+
+        <%-- Footer --%>
+<%--        <footer>
+        <div class="footer-content">
+        <div class="footer-icons">
+        <ul>
+        <li ><a class="nav-link px-2" href="https://www.instagram.com/eoifilms/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li ><a class="nav-link px-2" href="mailto:info@eoifilms.co.za"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+        </div>
+        <p style="font-size:x-small;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> EOI Films. All Rights Reserved.</p>
+        </div>
+        </footer>--%>
     </form>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

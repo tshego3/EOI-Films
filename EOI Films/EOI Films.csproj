@@ -81,7 +81,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\imgs\IMG_4646.JPG" />
+    <Content Include="assets\fonts\HelveticaNowDisplayXBlk.svg" />
+    <Content Include="assets\imgs\img1.jpg" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-grid.rtl.css" />
@@ -159,6 +160,10 @@
     <Content Include="data\eoifilms.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="assets\fonts\HelveticaNowDisplayXBlk.eot" />
+    <Content Include="assets\fonts\HelveticaNowDisplayXBlk.ttf" />
+    <Content Include="assets\fonts\HelveticaNowDisplayXBlk.woff" />
+    <Content Include="assets\fonts\HelveticaNowDisplayXBlk.woff2" />
     <None Include="packages.config" />
     <Content Include="signin\data\EOIFilmsDC.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

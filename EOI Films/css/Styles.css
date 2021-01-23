@@ -1,16 +1,62 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
+/* Global */
+@font-face {
+    font-family: 'HelveticaNowDisplayXBlk';
+    src: url('../assets/fonts/HelveticaNowDisplayXBlk.eot');
+    src: url('../assets/fonts/HelveticaNowDisplayXBlk.eot?#iefix') format('embedded-opentype'), 
+    url('../assets/fonts/HelveticaNowDisplayXBlk.otf') format('opentype'), 
+    url('../assets/fonts/HelveticaNowDisplayXBlk.svg') format('svg'), 
+    url('../assets/fonts/HelveticaNowDisplayXBlk.ttf') format('truetype'), 
+    url('../assets/fonts/HelveticaNowDisplayXBlk.woff') format('woff'), 
+    url('../assets/fonts/HelveticaNowDisplayXBlk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body {
     font-family: 'Poppins', sans-serif;
-/*    font-size: 16px;
-    height: fit-content;*/
     margin: 0;
     color: #fff;
     background-color: rgb(25, 25, 25);
     background-position: center;
-    overflow-y:hidden;
+    /*overflow-y:hidden;*/
+    overflow-x: hidden;
+}
+
+/*.navbar {
+    min-height: 88px;
+}*/
+
+.navbar-brand {
+    font-family: 'HelveticaNowDisplayXBlk' !important;
 }
 
 #navbar {
     background-color: #000;
+}
+
+.space {
+    padding-top: 88px;
+}
+
+/*.section-one {
+    
+}
+*/
+
+#par-1 {
+    margin: 0 auto;
+    font-weight: 800;
+}
+
+#img1 {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("../assets/imgs/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
 }
