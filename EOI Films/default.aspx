@@ -66,7 +66,7 @@
                 <h1 id="about-text-h1" class="display-1">About Us</h1>
                 <div class="row">
                     <div id="about-text" class="col">
-                        <p id="about-text-p" class="h2">Hi there! We're EOI Films, we those guys that take photos and videos from Pretoria, SA.</p>
+                        <p id="about-text-p" class="h2">It all started in 2013 when Tshegofatso Motswagae and Trevor Rakgalakane started a photography collective and celled it Explore Our Imagination. The collective promise was "To serve the best photographs, make the best visual graphics, give the best digital content, offer the best value and stay current with the art trends." Today that photography collective is operating professionally with a slightly different name, providing photography and film services.</p>
                     </div>
                     <div id="img2" class="col"></div>
                 </div>
@@ -80,6 +80,8 @@
                 <h1 id="contact-text-h1" class="display-1">Contact Us</h1>
                 <div class="row">
                     <div id="img3" class="col"></div>
+                    
+                    
                     <div id="contact-text" class="col">
                         <p id="contact-text-p" class="h2">Please allow at least 24 hours for an inquiry response before attempting an additional one, we often experience high volumes of emails.</p>
 
