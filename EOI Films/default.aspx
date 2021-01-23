@@ -45,7 +45,7 @@
           </div>
         </nav>
            
-        <%-- Content --%>
+        <!-- Content -->
        <section class="space"></section>
 
         <section class="section-one">
@@ -66,7 +66,7 @@
                 <h1 id="about-text-h1" class="display-1">About Us</h1>
                 <div class="row">
                     <div id="about-text" class="col">
-                        <p id="about-text-p" class="h2">It all started in 2013 when Tshegofatso Motswagae and Trevor Rakgalakane started a photography collective and celled it Explore Our Imagination. The collective promise was "To serve the best photographs, make the best visual graphics, give the best digital content, offer the best value and stay current with the art trends." Today that photography collective is operating professionally with a slightly different name, providing photography and film services.</p>
+                        <p id="about-text-p" class="h2">It all started in 2013 when Tshegofatso Motswagae and Trevor Rakgalakane started a photography collective and celled it Explore Our Imagination. The collectives promise was "To serve the best photographs, make the best visual graphics, give the best digital content, offer the best value and stay current with the latest art trends." Today that photography collective is operating professionally with a slightly different name, providing photography and film services.</p>
                     </div>
                     <div id="img2" class="col"></div>
                 </div>
@@ -79,42 +79,45 @@
             <div class="container">
                 <h1 id="contact-text-h1" class="display-1">Contact Us</h1>
                 <div class="row">
-                    <div id="img3" class="col"></div>
-                    
-                    
+                    <div id="img3" class="col"></div>  
                     <div id="contact-text" class="col">
                         <p id="contact-text-p" class="h2">Please allow at least 24 hours for an inquiry response before attempting an additional one, we often experience high volumes of emails.</p>
 
-                        <div class="form-row">
-                            <div class="form-group col-md-5">
+                        <br />
+
+                        <div class="row g-2">
+                            <div class="col-sm">
                                 <asp:Label ID="lblName" runat="server" Text="Name:"></asp:Label>
-                                <asp:TextBox ID="txtName" class="form-control" placeholder="Name" maxlength="50" name="Name" required="required" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtName" runat="server" class="form-control" placeholder="Name" maxlength="50" required="required"></asp:TextBox>
                             </div>
 
-                            <div class="form-group col-md-5">
+                            <div class="col-sm">
                                 <asp:Label ID="lblSurname" runat="server" Text="Surname:"></asp:Label>
-                                <asp:TextBox ID="txtSurname" class="form-control" placeholder="Surname" maxlength="25" name="Surname" required="required" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSurname" runat="server" Class="form-control" placeholder="Surname" maxlength="25" required="required"></asp:TextBox>
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="form-group col-md-5">
+                        <div class="row g-2">
+                            <div class="col-sm">
                                 <asp:Label ID="lblNumber" runat="server" Text="Number:"></asp:Label>
-                                <asp:TextBox ID="txtNumber" class="form-control" placeholder="+27" maxlength="12" name="Number" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtNumber" runat="server" Class="form-control" placeholder="+27" maxlength="12" ></asp:TextBox>
                             </div>
 
-                            <div class="form-group col-md-5">
+                            <div class="col-sm">
                                 <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
-                                <asp:TextBox ID="txtEmail" TextMode="Email" class="form-control" placeholder="@" maxlength="50" name="Email" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtEmail" TextMode="Email" class="form-control" placeholder="@" maxlength="50" runat="server"></asp:TextBox>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <asp:Label ID="lblMessage" runat="server" Text="Message:"></asp:Label>
-                            <asp:TextBox ID="txtlblMessage" TextMode="MultiLine" class="form-control" placeholder="Message" maxlength="255" name="Message"  rows="5" required="required" runat="server"></asp:TextBox>
+                        <div class="row g-4">
+                            <div class="col-sm">
+                                <asp:Label ID="lblMessage" runat="server" Text="Message:"></asp:Label>
+                                <asp:TextBox ID="txtlblMessage" TextMode="MultiLine" Class="form-control" placeholder="Message" maxlength="255" rows="5" required="required" runat="server"></asp:TextBox>
+                            </div>
                         </div>
 
-                        <asp:Button ID="btnContact" class="btn btn-dark col-md-3" runat="server" Text="Send" />
+                        <br />
+                        <asp:Button ID="btnContact" class="btn btn-dark col-md-2" runat="server" Text="Send" />
 
                         <p id="form-status"></p>
                     </div>
@@ -124,7 +127,7 @@
 
         <section class="space"></section>
 
-        <%-- Footer --%>
+        <!-- Footer -->
          <footer>
             <div class="container">
                 <div class="footer-icons">

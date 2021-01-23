@@ -19,7 +19,6 @@ html, body {
     color: #fff;
     background-color: rgb(25, 25, 25);
     background-position: center;
-    scroll-behavior: smooth !important;
     overflow-y: visible !important;
     overflow-x: hidden;
 }
@@ -74,6 +73,7 @@ html, body {
 }
 
 #about-text-h1 {
+    font-family: 'HelveticaNowDisplayXBlk', 'Poppins', sans-serif !important;
     text-align: center;
     padding-bottom: 88px;
 }
@@ -99,6 +99,7 @@ html, body {
 }
 
 #contact-text-h1 {
+    font-family: 'HelveticaNowDisplayXBlk', 'Poppins', sans-serif !important;
     text-align: center;
     padding-bottom: 88px;
 }
@@ -152,34 +153,23 @@ footer {
 
     #img2 {
         display: none;
-        /*width: 100%;
-        height: 50vh;
-        margin: 0 auto;
-        background-image: url("../assets/imgs/img2.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        border: none;*/
     }
 
     #img3 {
         display: none;
-        /*width: 100%;
-        height: 50vh;
-        margin: 0 auto;
-        background-image: url("../assets/imgs/img3.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-        border: none;*/
     }
 
     #head-text-h1 {
-        display: none;
+        text-align: center;
+        margin-top: 70vh;
     }
 
     #head-text-p {
-        display: none;
+        text-align: center;
+    }
+
+    #about-text {
+        height: auto;
     }
 
     #about-text-h1 {
@@ -187,9 +177,21 @@ footer {
         padding-bottom: 56px;
     }
 
+    #about-text-p {
+        text-align: center;
+    }
+
+    #contact-text {
+        height: auto;
+    }
+
     #contact-text-h1 {
         text-align: center;
         padding-bottom: 56px;
+    }
+
+    #contact-text-p {
+        text-align: center;
     }
 
     .section-one .row .col {
