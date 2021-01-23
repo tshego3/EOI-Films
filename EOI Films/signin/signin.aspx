@@ -15,7 +15,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+          <div class="container">
+
+            <div class="con-center">
+               <label for="inputUsername" class="col-sm-2 col-form-label">Username</label>
+               <div class="col-sm-10">
+                    <asp:TextBox ID="txtUname" runat="server" Class="form-control"></asp:TextBox>
+               </div>
+               <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+               <div class="col-sm-10">
+                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password" Class="form-control"></asp:TextBox>
+               </div>
+                <div class="col-sm-10 con-space">
+                   <asp:Button ID="btnLogin" runat="server" Class="btn btn-success" Text="Login" OnClick="btnLogin_Click"/>
+                    <br />
+                    <asp:Label ID="lblErrorMessage" runat="server" ForeColor="Red" Text="Incorrect Username or Password!"></asp:Label>
+               </div>
+            </div>
         </div>
     </form>
 
