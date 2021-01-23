@@ -27,7 +27,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav <%--ms-auto--%> m-lg-3">
+              <ul class="navbar-nav ms-auto <%--m-lg-3--%>">
                 <li class="nav-item">
                  <a class="nav-link active" href="#">Home</a>
                 </li>
@@ -35,10 +35,10 @@
                   <a class="nav-link" href="#">Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#">Contact</a>
                 </li>
               </ul>
             </div>
@@ -50,28 +50,88 @@
 
         <section class="section-one">
             <div class="row">
-                <div class="col">
-                    <h1 class="display-1">Display 1</h1>
-                    <p class="h2">h2. Bootstrap heading</p>
+                <div id="banner-image" class="col">
+                    <div class="container">
+                        <h1 id="head-text-h1" class="display-1">Welcome to</h1>
+                        <p id="head-text-p" class="h2">EOI Films</p>
+                    </div>
                 </div>
-                <div id="img1" class="col">
-                    
+            </div>
+        </section>
+
+        <section class="space"></section>
+
+        <section class="section-two">
+            <div class="container">
+                <h1 id="about-text-h1" class="display-1">About Us</h1>
+                <div class="row">
+                    <div id="about-text" class="col">
+                        <p id="about-text-p" class="h2">Hi there! We're EOI Films, we those guys that take photos and videos from Pretoria, SA.</p>
+                    </div>
+                    <div id="img2" class="col"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space"></section>
+
+        <section class="section-three">
+            <div class="container">
+                <h1 id="contact-text-h1" class="display-1">Contact Us</h1>
+                <div class="row">
+                    <div id="img3" class="col"></div>
+                    <div id="contact-text" class="col">
+                        <p id="contact-text-p" class="h2">Please allow at least 24 hours for an inquiry response before attempting an additional one, we often experience high volumes of emails.</p>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <asp:Label ID="lblName" runat="server" Text="Name"></asp:Label>
+                                <asp:TextBox ID="txtName" class="form-control" placeholder="Name" maxlength="50" name="Name" required="required" runat="server"></asp:TextBox>
+                 <%--           </div>
+
+                            <div class="form-group col-md-5">--%>
+                                <asp:Label ID="lblSurname" runat="server" Text="Surname"></asp:Label>
+                                <asp:TextBox ID="txtSurname" class="form-control" placeholder="Surname" maxlength="25" name="Surname" required="required" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <asp:Label ID="lblNumber" runat="server" Text="Number"></asp:Label>
+                                <asp:TextBox ID="txtNumber" TextMode="Phone" class="form-control" placeholder="+27" maxlength="12" name="Number" runat="server"></asp:TextBox>
+                           <%-- </div>
+
+                            <div class="form-group col-md-5">--%>
+                                <asp:Label ID="lblEmail" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtEmail" TextMode="Email" class="form-control" placeholder="@" maxlength="50" name="Email" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <asp:Label ID="lblMessage" runat="server" Text="Message"></asp:Label>
+                            <textarea class="form-control" placeholder="Message" maxlength="255" name="Message"  rows="5" required="required" runat="server"></textarea>
+                        </div>
+
+                        <asp:Button ID="btnContact" class="btn btn-dark col-md-3" runat="server" Text="Send" />
+
+                        <p id="form-status"></p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <%-- Footer --%>
-<%--        <footer>
+        <%-- <footer>
         <div class="footer-content">
         <div class="footer-icons">
-        <ul>
-        <li ><a class="nav-link px-2" href="https://www.instagram.com/eoifilms/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        <li ><a class="nav-link px-2" href="mailto:info@eoifilms.co.za"><i class="fa fa-envelope"></i></a></li>
-        </ul>
+            <ul>
+                <li ><a class="nav-link px-2" href="https://www.instagram.com/eoifilms/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li ><a class="nav-link px-2" href="mailto:info@eoifilms.co.za"><i class="fa fa-envelope"></i></a></li>
+            </ul>
         </div>
         <p style="font-size:x-small;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> EOI Films. All Rights Reserved.</p>
         </div>
-        </footer>--%>
+        </footer> --%>
     </form>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
