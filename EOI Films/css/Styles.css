@@ -19,7 +19,8 @@ html, body {
     color: #fff;
     background-color: rgb(25, 25, 25);
     background-position: center;
-    overflow-y: auto;
+    scroll-behavior: smooth !important;
+    overflow-y: visible !important;
     overflow-x: hidden;
 }
 
@@ -107,6 +108,26 @@ html, body {
     margin: 0px auto;
 }
 
+footer {
+    max-height: 88px;
+    min-height: 88px;
+}
+
+.footer-icons ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.footer-icons ul li {
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.footer-icons ul li a {
+    color: #fff;
+}
+
 @media (min-width: 992px) {
     .navbar {
         min-height: 88px;
@@ -179,5 +200,10 @@ html, body {
 
     .section-three .container .row .col {
         min-width: 100vw;
+    }
+
+    footer {
+        max-height: 88px;
+        min-height: 88px;
     }
 }

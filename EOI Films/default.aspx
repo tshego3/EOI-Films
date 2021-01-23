@@ -11,7 +11,7 @@
     <meta name="author" content="Tshegofatso Given Ditau Motswagae" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap, CSS, then FontAwesome -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
 
@@ -27,18 +27,18 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto <%--m-lg-3--%>">
+              <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                  <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Gallery</a>
+                  <a class="nav-link" href="https://www.instagram.com/eoifilms/" target="_blank">Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#about-text-h1">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#contact-text-h1">Contact</a>
                 </li>
               </ul>
             </div>
@@ -85,31 +85,31 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-5">
-                                <asp:Label ID="lblName" runat="server" Text="Name"></asp:Label>
+                                <asp:Label ID="lblName" runat="server" Text="Name:"></asp:Label>
                                 <asp:TextBox ID="txtName" class="form-control" placeholder="Name" maxlength="50" name="Name" required="required" runat="server"></asp:TextBox>
-                 <%--           </div>
+                            </div>
 
-                            <div class="form-group col-md-5">--%>
-                                <asp:Label ID="lblSurname" runat="server" Text="Surname"></asp:Label>
+                            <div class="form-group col-md-5">
+                                <asp:Label ID="lblSurname" runat="server" Text="Surname:"></asp:Label>
                                 <asp:TextBox ID="txtSurname" class="form-control" placeholder="Surname" maxlength="25" name="Surname" required="required" runat="server"></asp:TextBox>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-5">
-                                <asp:Label ID="lblNumber" runat="server" Text="Number"></asp:Label>
-                                <asp:TextBox ID="txtNumber" TextMode="Phone" class="form-control" placeholder="+27" maxlength="12" name="Number" runat="server"></asp:TextBox>
-                           <%-- </div>
+                                <asp:Label ID="lblNumber" runat="server" Text="Number:"></asp:Label>
+                                <asp:TextBox ID="txtNumber" class="form-control" placeholder="+27" maxlength="12" name="Number" runat="server"></asp:TextBox>
+                            </div>
 
-                            <div class="form-group col-md-5">--%>
-                                <asp:Label ID="lblEmail" runat="server" Text="Label"></asp:Label>
+                            <div class="form-group col-md-5">
+                                <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                                 <asp:TextBox ID="txtEmail" TextMode="Email" class="form-control" placeholder="@" maxlength="50" name="Email" runat="server"></asp:TextBox>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <asp:Label ID="lblMessage" runat="server" Text="Message"></asp:Label>
-                            <textarea class="form-control" placeholder="Message" maxlength="255" name="Message"  rows="5" required="required" runat="server"></textarea>
+                            <asp:Label ID="lblMessage" runat="server" Text="Message:"></asp:Label>
+                            <asp:TextBox ID="txtlblMessage" TextMode="MultiLine" class="form-control" placeholder="Message" maxlength="255" name="Message"  rows="5" required="required" runat="server"></asp:TextBox>
                         </div>
 
                         <asp:Button ID="btnContact" class="btn btn-dark col-md-3" runat="server" Text="Send" />
@@ -120,22 +120,26 @@
             </div>
         </section>
 
+        <section class="space"></section>
+
         <%-- Footer --%>
-        <%-- <footer>
-        <div class="footer-content">
-        <div class="footer-icons">
-            <ul>
-                <li ><a class="nav-link px-2" href="https://www.instagram.com/eoifilms/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li ><a class="nav-link px-2" href="mailto:info@eoifilms.co.za"><i class="fa fa-envelope"></i></a></li>
-            </ul>
-        </div>
-        <p style="font-size:x-small;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> EOI Films. All Rights Reserved.</p>
-        </div>
-        </footer> --%>
+         <footer>
+            <div class="container">
+                <div class="footer-icons">
+                    <ul>
+                        <li ><a class="nav-link px-2" href="https://www.instagram.com/eoifilms/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li ><a class="nav-link px-2" href="mailto:info@eoifilms.co.za"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <p style="font-size:x-small;text-align:center;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> EOI Films. All Rights Reserved.</p>
+            </div>
+        </footer> 
     </form>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="js/jquery-3.5.1.min.js" ></script>
-    <script src="js/bootstrap.bundle.min.js" ></script>
+    <!-- Query, then Bootstrap JS and Others -->
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js" ></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js" ></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.js"></script>
 </body>
 </html>

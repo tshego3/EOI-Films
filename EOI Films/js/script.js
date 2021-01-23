@@ -1,7 +1,7 @@
 ﻿//carousel Interval
-$('.carousel').carousel({
-    interval: 4000
-})
+//$('.carousel').carousel({
+//    interval: 4000
+//})
 
 //Gallery
 let galleryImages = document.querySelectorAll(".gallery-img");
