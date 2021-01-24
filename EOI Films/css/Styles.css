@@ -224,3 +224,23 @@ footer {
         min-height: 88px;
     }
 }
+
+@media (max-height: 840px) {
+    #img2 {
+        height: auto;
+    }
+
+    #img3 {
+        height: auto;
+    }
+}
+
+/*@media (min-width: 576px) and (max-width: 992px) {
+    #about-text {
+        padding: 0 0 !important;
+    }
+
+    #contact-text {
+        padding: 0 0 !important;
+    }
+}*/
