@@ -83,6 +83,19 @@ html, body {
     margin: 0px auto;
 }
 
+.about-text-nav {
+    text-decoration: none;
+    color: #fff;
+}
+
+.about-text-nav:hover {
+    color: #ccc;
+}
+
+#about-text-span {
+    font-family: 'HelveticaNowDisplayXBlk', 'Poppins', sans-serif !important;
+}
+
 #img3 {
     width: 100%;
     height: 50vh;
