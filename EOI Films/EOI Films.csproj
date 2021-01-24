@@ -85,7 +85,7 @@
     <Content Include="assets\imgs\banner.jpg" />
     <Content Include="assets\imgs\img1.jpg" />
     <Content Include="assets\imgs\img2.jpg" />
-    <Content Include="assets\imgs\img3.JPG" />
+    <Content Include="assets\imgs\img3.jpg" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-grid.rtl.css" />
