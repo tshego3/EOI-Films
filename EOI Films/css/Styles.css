@@ -211,13 +211,13 @@ footer {
         min-width: 100vw;
     }
 
-    .section-two .container .row .col {
+    /*.section-two .container .row .col {
         min-width: 100vw;
-    }
+    }*/
 
-    .section-three .container .row .col {
+    /*.section-three .container .row .col {
         min-width: 100vw;
-    }
+    }*/
 
     footer {
         max-height: 88px;
@@ -234,13 +234,3 @@ footer {
         height: auto;
     }
 }
-
-/*@media (min-width: 576px) and (max-width: 992px) {
-    #about-text {
-        padding: 0 0 !important;
-    }
-
-    #contact-text {
-        padding: 0 0 !important;
-    }
-}*/
