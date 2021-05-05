@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\includes"
   ],
-  "SelectedNode": "\\signin.html",
+  "SelectedNode": "\\includes\\eoifilms.json",
   "PreviewInSolutionExplorer": false
 }
