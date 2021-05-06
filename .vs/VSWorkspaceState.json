@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\includes"
   ],
-  "SelectedNode": "\\js",
+  "SelectedNode": "\\includes\\eoifilms.json",
   "PreviewInSolutionExplorer": false
 }
