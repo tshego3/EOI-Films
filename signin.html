@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="css/signin-styles.css">
     <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">
 
+    <!--jQuery-->
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+
     <title>Sign in</title>
 </head>
 <body>
@@ -85,11 +88,59 @@
         //Verify user account
         function validateForm() {
             try {
-                var txtUsername = document.getElementById("userID").value;
-                var txtPassword = document.getElementById("passID").value;
-                var jFile = fetch("/includes/eoifilms.json")
-                    .then(response => { return response.json(); })
-                    .then(data => console.log(data));
+                var txtUsername = document.getElementById("txtUser").value;
+                var txtPassword = document.getElementById("txtPass").value;
+                //var jFile = fetch("/includes/eoifilms.json")
+                //    .then(response => { return response.json(); })
+                //    .then(data => console.log(data));
+
+                //$.getJSON("/includes/eoifilms.json", function (jFile) {
+                //    //$('#stage').html('<p> Name: ' + jd.name + '</p>');
+                //    if (jFile[users].UserName === txtUsername) {
+                //        alert("match found");
+                //    }
+                //});
+
+                //var confirmAccount = fetch("/includes/eoifilms.json")
+                //    .then(response => { return response.json(); })
+                //    .then(data => {
+                //        return data.users.filter(function (account) { return account.UserName === txtUsername && account.UPassWord === txtPassword;})
+                //    });
+                var userInfo = {
+                    "users": [
+                        {
+                            "ID": 1,
+                            "Name": "Tshegofatso Given Ditau",
+                            "Surname": "Motswagae",
+                            "UserName": "Tshegofatso",
+                            "UPassWord": "HRg73KRK"
+                        },
+                        {
+                            "ID": 2,
+                            "Name": "Bokang Trevor",
+                            "Surname": "Rakgalakane",
+                            "UserName": "Trevor",
+                            "UPassWord": "2pYvgrpk"
+                        },
+                        {
+                            "ID": 3,
+                            "Name": "Onika",
+                            "Surname": "Moloto",
+                            "UserName": "Onika",
+                            "UPassWord": "sRraB9MF"
+                        }
+                    ]
+                }
+                var confirmAccount = userInfo.users.filter(function (account) {
+                    return account.UserName === txtUsername && account.UPassWord === txtPassword;
+                });
+                if (confirmAccount != "") {
+                    //alert("Account verified!");
+                    console.log(confirmAccount);
+                }
+                else {
+                    alert("Username or Password is invalid!");
+                }
             }
             catch (ex) {
                 alert(ex.message);
@@ -162,14 +213,14 @@
                 <div class="form-row">
                     <div class="form-group col-md-4 mx-auto">
                         <label for="inputUsername">Username</label>
-                        <input type="text" class="form-control" placeholder="Username" maxlength="50" name="user" id="userID" required autofocus>
+                        <input type="text" class="form-control" placeholder="Username" maxlength="50" name="user" id="txtUser" required autofocus>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-4 mx-auto">
                         <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" placeholder="Password" maxlength="10" name="passid" id="passID" required>
+                        <input type="password" class="form-control" placeholder="Password" maxlength="10" name="pass" id="txtPass" required>
                     </div>
                 </div>
 
@@ -203,8 +254,7 @@
         </div>
     </footer>
 
-    <!--jQuery, then Popper.js, then Bootstrap JS and Others-->
-    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <!--Popper.js, then Bootstrap JS and Others-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/signin-script.js"></script>
