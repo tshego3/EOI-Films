@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Film and Photography">
-    <meta name="keywords" content="HTML, CSS, jQuery, JavaScript and PHP">
+    <meta name="keywords" content="HTML, CSS, jQuery, JavaScript and JSON">
     <meta name="author" content="Tshegofatso Given Ditau Motswagae">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -33,7 +33,7 @@
             }
         }
 
-        //Confirm active cookie
+        //Collect the cookie session
         function getCookie(cookie_name) {
             try {
                 var name = cookie_name + "=";
@@ -50,10 +50,30 @@
             }
         }
 
+        //Set cookie session variable
+        var userstr = getCookie("username");
+
+        //Verify active session
+        function verifyActiveSession(loggedin) {
+            try {
+                if (Boolean(loggedin)) {
+                    document.getElementById("userstr0").innerHTML = userstr;
+                    document.getElementById("navbar-inactive-session").remove();
+                    window.location.replace("invoices.html");
+                }
+                else {
+                    document.getElementById("userstr1").innerHTML = "Guest";
+                    document.getElementById("navbar-active-session").remove();
+                }
+            }
+            catch (ex) {
+                alert(ex.message);
+            }
+        }
+
         //Confirm active session
         window.addEventListener("DOMContentLoaded", function () {
             try {
-                var userstr = getCookie("username");
                 if (userstr != "") {
                     verifyActiveSession(true);
                 }
@@ -66,46 +86,36 @@
             }
         });
 
-        //Verify active session
-        function verifyActiveSession(loggedin) {
-            try {
-                if (Boolean(loggedin)) {
-                    document.getElementById("userstr0").innerHTML = userstr;
-                    document.getElementById("navbar-inactive-session").remove();
-                    document.getElementById("content-active-session").remove();
-                    //window.location.replace("invoices.html");
-                }
-                else {
-                    document.getElementById("userstr1").innerHTML = "Guest";
-                    document.getElementById("navbar-active-session").remove();
-                }
-            }
-            catch (ex) {
-                alert(ex.message);
-            }
-        }
-
         //Verify user account
         function validateForm() {
             try {
                 var txtUsername = document.getElementById("txtUser").value;
+                //var expression = new RegExp(txtUsername, "i");
                 var txtPassword = document.getElementById("txtPass").value;
-                //var jFile = fetch("/includes/eoifilms.json")
+
+                //var userInfo = fetch("/includes/eoifilms.json")
                 //    .then(response => { return response.json(); })
                 //    .then(data => console.log(data));
 
-                //$.getJSON("/includes/eoifilms.json", function (jFile) {
-                //    //$('#stage').html('<p> Name: ' + jd.name + '</p>');
-                //    if (jFile[users].UserName === txtUsername) {
-                //        alert("match found");
-                //    }
+                //var userNames = [];
+                //var userPassword = [];
+
+                //var userData = fetch("/includes/data.json")
+                //    .then(response => { return response.json(); })
+                //    .then(data => { userNames = data.UserName, userPassword = data.UPassWord });
+
+
+                //$.getJSON("includes/data.json", function(data) {
+                //    $.each(data, function (key, value) {
+                //        if (value.UserName.search(expression) != -1) {
+                //            alert("match found");
+                //        }
+                //        else {
+                //            alert("Username or Password is invalid!");
+                //        }
+                //    });
                 //});
 
-                //var confirmAccount = fetch("/includes/eoifilms.json")
-                //    .then(response => { return response.json(); })
-                //    .then(data => {
-                //        return data.users.filter(function (account) { return account.UserName === txtUsername && account.UPassWord === txtPassword;})
-                //    });
                 var userInfo = {
                     "users": [
                         {
@@ -135,8 +145,7 @@
                     return account.UserName === txtUsername && account.UPassWord === txtPassword;
                 });
                 if (confirmAccount != "") {
-                    //alert("Account verified!");
-                    console.log(confirmAccount);
+                    window.location.replace("invoices.html");
                 }
                 else {
                     alert("Username or Password is invalid!");
@@ -149,7 +158,7 @@
 
     </script>
 
-    <!--Navbar active session-->
+    <!--Navbar-->
     <div id="navbar-active-session">
         <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="index.html">
@@ -162,7 +171,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#" id="userstr0">Username<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#" id="userstr0">Guest<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="invoices.html">Invoices</a>
@@ -178,7 +187,6 @@
         </nav>
     </div>
 
-    <!--Navbar inactive session-->
     <div id="navbar-inactive-session">
         <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="index.html">
@@ -191,7 +199,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="signin.html" id="userstr1">Username<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="signin.html" id="userstr1">Guest<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="signin.html">Sign in</a>
@@ -207,7 +215,6 @@
             <div class="content-inside">
 
                 <!--Sign in form-->
-                <!--<form method="post" action="signin.html">-->
                 <h1 class="mb-4 font-weight-light text-center"><strong>Sign in</strong></h1>
 
                 <div class="form-row">
@@ -231,7 +238,6 @@
                 </div>
 
                 <p class="mt-3 font-weight-normal text-center">Only available to EOI Films <strong>family.</strong></p>
-                <!--</form>-->
 
             </div>
         </div>

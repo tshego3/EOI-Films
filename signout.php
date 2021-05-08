@@ -20,7 +20,7 @@ echo(
 );
 
 require_once 'includes/functions.php';
-
+Custom invoices
 $userstr = ' (Guest)';
 
 if (isset($_SESSION['user']))

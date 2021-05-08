@@ -1,0 +1,25 @@
+{
+  [
+    {
+    "ID": 1,
+    "Name": "Tshegofatso Given Ditau",
+    "Surname": "Motswagae",
+    "UserName": "Tshegofatso",
+    "UPassWord": "HRg73KRK"
+    },
+    {
+    "ID": 2,
+    "Name": "Bokang Trevor",
+    "Surname": "Rakgalakane",
+    "UserName": "Trevor",
+    "UPassWord": "2pYvgrpk"
+    },
+    {
+    "ID": 3,
+    "Name": "Onika",
+    "Surname": "Moloto",
+    "UserName": "Onika",
+    "UPassWord": "sRraB9MF"
+    }
+  ]
+}
