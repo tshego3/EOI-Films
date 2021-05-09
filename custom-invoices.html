@@ -57,7 +57,7 @@
         function verifyActiveSession(loggedin) {
             try {
                 if (Boolean(loggedin)) {
-                    document.getElementById("userstr0").innerHTML = "User";
+                    document.getElementById("userstr0").innerHTML = sessionStorage.getItem("ssusername");
                     document.getElementById("navbar-inactive-session").remove();
                     document.getElementById("content-inactive-session").remove();
                 }

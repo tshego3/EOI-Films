@@ -146,9 +146,8 @@
                 });
                 if (confirmAccount != "") {
                     setCookie("username", txtUsername);
-                    //setInterval(function () { window.location.replace("signin.html") }, 1000);
-                    //alert(getCookie("username"));
-                    document.getElementById("userstr0").innerHTML = getCookie("username").toString;
+                    sessionStorage.setItem("ssusername", txtUsername);
+                    setInterval(function () { window.location.replace("signin.html") }, 1000);
                 }
                 else {
                     alert("Username or Password is invalid!");

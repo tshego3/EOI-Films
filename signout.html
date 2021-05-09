@@ -57,11 +57,12 @@
         function verifyActiveSession(loggedin) {
             try {
                 if (Boolean(loggedin)) {
-                    document.getElementById("userstr0").innerHTML = "User";
+                    document.getElementById("userstr0").innerHTML = sessionStorage.getItem("ssusername");;
                     document.getElementById("navbar-inactive-session").remove();
                     document.getElementById("content-inactive-session").remove();
                     setCookie("username", "");
-                    window.location.replace("signin.html");
+                    sessionStorage.setItem("ssusername", "");
+                    setInterval(function () { window.location.replace("signin.html") }, 1000);
                 }
                 else {
                     document.getElementById("userstr1").innerHTML = "Guest";
