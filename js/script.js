@@ -108,21 +108,24 @@ window.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("frmHome");
     var button = document.getElementById("btnContact");
     var status = document.getElementById("form-status");
-    // Success and Error functions for after the form is submitted
-    function success() {
-        form.reset();
-        button.style = "display: none ";
-        status.innerHTML = "Thanks!";
+
+    if (form) {
+        // Success and Error functions for after the form is submitted
+        function success() {
+            form.reset();
+            button.style = "display: none ";
+            status.innerHTML = "Thanks!";
+        }
+        function error() {
+            status.innerHTML = "Oops! There was a problem.";
+        }
+        // handle the form submission event
+        form.addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            var data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);
+        });
     }
-    function error() {
-        status.innerHTML = "Oops! There was a problem.";
-    }
-    // handle the form submission event
-    form.addEventListener("submit", function (ev) {
-        ev.preventDefault();
-        var data = new FormData(form);
-        ajax(form.method, form.action, data, success, error);
-    });
 });
 //helper function for sending an AJAX request
 function ajax(method, url, data, success, error) {
